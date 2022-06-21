@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class tile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //define a color as purple
+    public Color purple = new Color(0.5f, 0f, 0.5f);
 
-    // Update is called once per frame
-    void Update()
+    void OnMouseOver()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            //set the tile's color to purple
+            GetComponent<Renderer>().material.color = purple;
+        }
     }
 }
